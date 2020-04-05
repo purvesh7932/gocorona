@@ -1,0 +1,41 @@
+.card{
+    font-size: 34px;
+    /* margin-top: 10px; */
+    /* border: 2px solid; */
+    padding-top: 10px;
+    border: 1px solid #6c757d;
+    display: flex;
+    justify-content: center;
+    box-shadow: 15px 11px #888888;
+}
+
+@media only screen and (max-width: 600px) {
+    #tableD{
+        margin-top: 85%;
+    }
+    #card2{
+        margin-left:50px;
+    }
+    #img{
+        position: relative !important;
+    }
+  }
+
+@media{@media only screen and (min-width: 700px) {
+    #main-div{
+        padding: 0px;
+    }
+}
+}
+#Active,#Active1{
+    color:#FF362E;
+}
+#Confirmed,#Confirmed1{
+    color:#E83350;
+}
+#Death,#Death1{
+    color:#0A3D62; 
+}
+#Recovered,#Recovered1{
+    color:#10A881;
+}

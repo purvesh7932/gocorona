@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>GoCorona</title>
+    <link rel="icon" href="img/123c.png" type="image/icon type">
+    <script src="js/covid19.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="./css/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   
+
+</head>
+<body>
+
+    <div class="container-fluid" id="img" style="position: fixed;color:grey">
+        <spam><img src="img/123c.png" style="width: 100px;
+            display: inline-block;"></spam>
+        <h1 style="display: inline-block;">
+            Covid-19 Data Centre WorldWide
+        </h1>
+    </div>
+    <div id="main-div" style="padding: 10px;">
+    <div class="col-sm-6" style="margin-top: 100px;">
+      <div class="col-sm-6 col-xs-6">
+        <div class="card" style="width: 18rem;">
+            <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
+            <div class="card-body">
+              <h5 class="card-title"  id="Death1">Death</h5>
+              <p class="card-text" id="Death">200</p>
+              <a href="#" class="btn btn-primary" id="DeathT">+80</a>
+            </div>
+          </div>
+       
+      </div>   
+      <div class="col-sm-6 col-xs-6">
+        <div class="card" id="card2"style="width: 18rem;">
+            <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
+            <div class="card-body">
+              <h5 class="card-title" id="Confirmed1">Confirmed</h5>
+              <p class="card-text" id="Confirmed">200</p>
+              <a href="#" class="btn btn-primary" id="confimT"></a>
+            </div>
+          </div>
+       
+      </div>    
+      <div class="col-sm-6 col-xs-6" style="top:18px;">
+        <div class="card" style="width: 18rem;">
+            <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
+            <div class="card-body">
+              <h5 class="card-title" id='Active1'>Active</h5>
+              <p class="card-text" id='Active'>200</p>
+              <a href="#" class="btn btn-primary" id="ActiveT">+80</a>
+            </div>
+          </div>
+       
+      </div>   
+      <div class="col-sm-6 col-xs-6"style="top:18px;">
+        <div class="card" id="card2" style="width: 18rem;">
+            <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
+            <div class="card-body">
+              <h5 class="card-title"id="Recovered1">Recovered</h5>
+              <p class="card-text" id="Recovered">200</p>
+              <a href="#" class="btn btn-primary" id="RecoveredT">+80</a>
+            </div>
+          </div>
+       
+      </div>   
+      
+     
+</div>
+</div>
+</br>
+</br>
+
+    <div class="col-sm-6" id="tableD">
+        <select class="form-control" id="selecT" onchange="showData();"  >
+            <option >Search By</option>
+            <option value="India" > India</option>
+
+            <option value="World">World</option>
+          </select>
+    <table class="table">
+        <thead>
+          <tr>
+            <th id="fTble" scope="col">State</th>
+            <th scope="col">Confirmed</th>
+            <th scope="col">Active</th>
+            <th scope="col">Recovered</th>
+            <th scope="col">Death</th>
+            <th scope="col"> Rate</th>
+          </tr>
+        </thead>
+        <tbody id="dataforCovid">
+                
+        </tbody>
+      </table>
+    </div>
+    <script>
+        function showData(){
+            var val=document.getElementById("selecT").value;
+            if(val=='India'){
+                covidDataIndia();
+            }
+            else if(val=='World'){
+                covidDataWorld();
+            }
+        }
+    </script>
+</body>
+</html>
