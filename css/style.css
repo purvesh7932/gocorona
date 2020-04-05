@@ -14,10 +14,13 @@
         margin-top: 85%;
     }
     #card2{
-        margin-left:50px;
+        margin-left:-12px;
     }
     #img{
         position: relative !important;
+    }
+    #card1{
+        margin-left:-22px;
     }
   }
 
