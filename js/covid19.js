@@ -1,5 +1,6 @@
+
 function covidDataIndia(){
-    $("#confimT").text("Loading");
+$("#confimT").text("Loading");
 $("#ActiveT").text("Loading");
 $("#RecoveredT").text("Loading");
 $("#DeathT").text("Loading");
@@ -15,6 +16,7 @@ Http.send();
 
 
 Http.onreadystatechange = (e) => {
+   ui="";
    var json=Http.response;
    if(json==""){
      }
@@ -90,6 +92,7 @@ Http.onreadystatechange = (e) => {
         +'</tr>';
 
     }
+
     $("#confimT").text("+"+tconfirm);
     $("#ActiveT").text("+"+tconfirm);
     $("#RecoveredT").text("+"+tRecv);
@@ -102,7 +105,6 @@ Http.onreadystatechange = (e) => {
 
 
 function covidDataWorld(){
-console.log("enter");
 $("#fTble").text("Countries");
 $("#confimT").text("Loading");
 $("#ActiveT").text("Loading");
