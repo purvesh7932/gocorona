@@ -3,11 +3,12 @@ function graphforIndia(){
     const url='https://api.covid19india.org/data.json';
     Http.open("GET", url);
     Http.send();
-    var arrayforDate=[];
-    var arrayforData=[];
+    
     Http.onreadystatechange = (e) => {
     ui="";
     var json=Http.response;
+    var arrayforDate=[];
+    var arrayforData=[];
     if(json==""){
         }
     else{
