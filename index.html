@@ -178,12 +178,18 @@
     $("#pie").removeClass();
     $("#pie").addClass("col-sm-3");
   }
-  if(ww<1800){
+  else if(ww<1800){
    
     $("#pie1").removeClass();
     $("#pie1").addClass("col-sm-4");
     $("#pie").removeClass();
     $("#pie").addClass("col-sm-4");
+    
+
+  }
+  if(ww<690){
+    $(".darkmode-toggle").hide();
+    $(".darkmode-layer--button").hide();
   }
 });
    
