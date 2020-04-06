@@ -15,15 +15,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    
 
+
 </head>
-<body>
+<body style="color:grey;">
 
     <div class="container-fluid" id="img" style="position: fixed;color:grey">
         <span><img src="img/123c.png" style="width: 100px;
             display: inline-block;"></span>
         <h1 style="display: inline-block;">
-            Covid-19 Data Centre WorldWide
-        </h1>
+            Covid-19 Data Centre WorldWide 
     </div>
     <div id="main-div" style="padding: 10px;">
     <div class="col-sm-6" style="margin-top: 100px;">
@@ -72,7 +72,7 @@
        
       </div>   
 
-      <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+     
       
      
 </div>
@@ -87,15 +87,15 @@
 
             <option value="World">World</option>
           </select>
-    <table class="table">
-        <thead>
-          <tr>
+    <table class="table sticky">
+        <thead >
+          <tr >
             <th id="fTble" scope="col">State</th>
             <th scope="col">Confirmed</th>
-            <th scope="col">Active</th>
-            <th scope="col">Recovered</th>
-            <th scope="col">Death</th>
-            <th scope="col"> Rate</th>
+            <th  scope="col">Active</th>
+            <th  scope="col">Recovered</th>
+            <th  scope="col">Death</th>
+            <th  scope="col"> Rate</th>
           </tr>
         </thead>
         <tbody id="dataforCovid">
@@ -119,5 +119,8 @@
             }
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script src="./js/script.js"></script>
+    
 </body>
 </html>
