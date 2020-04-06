@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>GoCorona</title>
-    <link rel="icon" href="img/123c.png" type="image/icon type">
+    <link rel="icon" href="img/logo.gif" type="image/icon type">
     <script src="js/covid19.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,16 +17,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="js/chart-graph.js"></script>
     <script src="js/graph.js"></script>
-
+    <style>
+      .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #10A881;;
+      /* border-right: 16px solid #0A3D62; */
+      /* border-bottom: 16px solid #E83350;
+      border-left: 16px solid #FF362E; */
+      width: 70px;
+      height: 70px;
+      -webkit-animation: spin 1s linear infinite; /* Safari */
+      animation: spin 1.9s linear infinite;
+    }
+    
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    
+    </style>
 
 </head>
 <body style="color:grey;">
 
     <div class="container-fluid" id="img" style="color:grey">
-        <span><img src="img/123c.png" style="width: 100px;
+        <span><img src="img/logo.gif" style="width: 100px;
             display: inline-block;"></span>
-        <h1 style="display: inline-block;">
-            Covid-19 Data Centre WorldWide 
+       <h1 style="display: inline-block;">
+        Go Corona [Covid-19] </h1>
     </div>
     <div id="main-div" style="padding: 10px;">
     <div class="col-sm-6" style="margin-top: 100px;">
@@ -115,21 +136,10 @@
       </table>
     </div>
     <div class="col-sm-12">
+    <hr id="Hr" style="border-top: 1px dashed red;">
     <span style="color: black;display: flex;justify-content: center;"> &copy; ReservedBy &nbsp;<strong>GoCorona</strong> </span>
     <span style="color: black;display: flex;justify-content: center;"> DevelopedBy &nbsp;<strong>Kalpan & Rajesh</strong> </span>
     </div>
-    <script>
-      
-        function showData(){
-            var val=document.getElementById("selecT").value;
-            if(val=='India'){
-                covidDataIndia();
-            }
-            else if(val=='World'){
-                covidDataWorld();
-            }
-        }
-    </script>
     <script src="./js/script.js"></script>
     <style>
       
@@ -191,6 +201,15 @@
     $(".darkmode-layer darkmode-layer-button").hide();
   }
 });
+function showData(){
+            var val=document.getElementById("selecT").value;
+            if(val=='India'){
+                covidDataIndia();
+            }
+            else if(val=='World'){
+                covidDataWorld();
+            }
+        }
    
     </script>
 </body>

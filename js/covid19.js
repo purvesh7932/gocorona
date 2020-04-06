@@ -1,14 +1,13 @@
 
 function covidDataIndia(){
-$("#fTble").text("State");
-$("#confimT").text("Loading");
-$("#ActiveT").text("Loading");
-$("#RecoveredT").text("Loading");
-$("#DeathT").text("Loading");
-$("#Confirmed").text("Loading...");
-$("#Active").text("Loading...");
-$("#Death").text("Loading...");
-$("#Recovered").text("Loading...");
+    $("#Confirmed").text("Loading");
+    $("#Active").text("Loading...");
+    $("#Death").text("Loading...");
+    $("#Recovered").text("Loading...");
+$("#confimT").html('<div class="loader"></div>');
+$("#ActiveT").html('<div class="loader"></div>');
+$("#RecoveredT").html('<div class="loader"></div>');
+$("#DeathT").html('<div class="loader"></div>');
 var ui="";
 const Http = new XMLHttpRequest();
 const url='https://api.covid19india.org/data.json';
@@ -108,16 +107,18 @@ Http.onreadystatechange = (e) => {
 
 
 function covidDataWorld(){
-$("#fTble").text("Countries");
-$("#confimT").text("Loading");
-$("#ActiveT").text("Loading");
-$("#RecoveredT").text("Loading");
-$("#DeathT").text("Loading");
-$("#Confirmed").text("Loading...");
-$("#Active").text("Loading...");
-$("#Death").text("Loading...");
-$("#Recovered").text("Loading...");
-$("#dataforCovid").html('Loading..');
+    $("hr").hide();
+    $("#fTble").text("Countries");
+    $("#confimT").text("Loading");
+    $("#ActiveT").text("Loading");
+    $("#RecoveredT").text("Loading");
+    $("#DeathT").text("Loading");
+    $("#dataforCovid").html('<div class="loader"></div>');
+    $("#Confirmed").html('<div class="loader"></div>');
+    $("#Active").html('<div class="loader"></div>');
+    $("#Death").html('<div class="loader"></div>');
+    $("#Recovered").text("Loading...").html('<div class="loader"></div>');
+    $("#dataforCovid").html('<img id="loder" src="./img/loder.gif" alt="Smiley face" height="200px" width="200px" style="display:flex;justify-content:center;align-items:center">');
 const Http = new XMLHttpRequest();
 const url='https://coronavirus-19-api.herokuapp.com/countries';
 Http.open("GET", url);
@@ -175,6 +176,7 @@ Http.onreadystatechange = (e) => {
     $("#ActiveT").text("Unknown");
     $("#RecoveredT").text("Unknown");
     $("#dataforCovid").html(ui);
+    $("hr").show();
    }}
   
 }
