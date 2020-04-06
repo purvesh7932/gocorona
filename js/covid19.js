@@ -1,5 +1,6 @@
 
 function covidDataIndia(){
+$("#fTble").text("State");
 $("#confimT").text("Loading");
 $("#ActiveT").text("Loading");
 $("#RecoveredT").text("Loading");

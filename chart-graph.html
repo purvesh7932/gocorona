@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <title>GoCorona</title>
+</head>
+<body>
+    <div class="col-sm-6">
+        <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+    </div>
+    
+  <script>
+      var data = [{
+  values: [19, 26, 55],
+  labels: ['Residential', 'Non-Residential', 'Utility'],
+  type: 'pie'
+}];
+
+var layout = {
+  height: 400,
+  width: 500
+};
+
+Plotly.newPlot('myDiv', data, layout);
+  </script>
+</body>
+</html>
