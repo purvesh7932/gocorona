@@ -37,7 +37,8 @@ function piechartForIndia(){
     datasets: [{
         label: "India Pie Chart (millions)",
         backgroundColor: ["#AE1438", "#2475B0","#019031","#333945"],
-        data: [active,cnfirm,death,recv]
+        data: [active,cnfirm,recv,death]
+
     
     }]
     },
@@ -75,7 +76,7 @@ Http.onreadystatechange = (e) => {
         datasets: [{
             label: "World Pie Chart (millions)",
             backgroundColor: ["#AE1438", "#2475B0","#019031","#333945"],
-            data: [active,confirm,death,recv]
+            data: [active,confirm,recv,death]
         
         }]
         },
