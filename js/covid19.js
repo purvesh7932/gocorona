@@ -28,12 +28,13 @@ Http.onreadystatechange = (e) => {
     var tRecv=0;
     var next3=0;
     var tDead=0;
-
+    console.log("enter");
     var jsonData=JSON.parse(json);
     var confirm=jsonData.statewise[0].confirmed;
     var active=jsonData.statewise[0].active;
     var death=jsonData.statewise[0].deaths;
     var recv=jsonData.statewise[0].recovered;
+    console.log(jsonData);
     $("#Confirmed").text(confirm);
     $("#Active").text(active);
     $("#Death").text(death);
@@ -98,6 +99,7 @@ Http.onreadystatechange = (e) => {
     $("#ActiveT").text("+"+tconfirm);
     $("#RecoveredT").text("+"+tRecv);
     $("#DeathT").text("+"+tDead);
+  
     $("#dataforCovid").html(ui);
         }
     }
@@ -177,15 +179,16 @@ Http.onreadystatechange = (e) => {
   
 }
 }
-
-
-
-
-
-
-
-
 covidDataIndia();
+covidDataIndia();
+
+
+
+
+
+
+
+
 
 
 

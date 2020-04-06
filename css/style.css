@@ -11,10 +11,10 @@
 
 @media only screen and (max-width: 600px) {
     #tableD{
-        margin-top: 85%;
+        margin-top: 0%;
     }
     #card2{
-        margin-left:-12px;
+        margin-left:13px;
     }
     #img{
         position: relative !important;
@@ -24,12 +24,12 @@
     }
   }
 
-@media{@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) {
     #main-div{
         padding: 0px;
     }
 }
-}
+
 #Active,#Active1{
     color:#FF362E;
 }
@@ -41,4 +41,9 @@
 }
 #Recovered,#Recovered1{
     color:#10A881;
+}
+@media only screen and (max-width: 600px) {
+    #chartDiv{
+        margin-top: 358px;
+    }
 }

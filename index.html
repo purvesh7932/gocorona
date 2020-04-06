@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>GoCorona</title>
     <link rel="icon" href="img/123c.png" type="image/icon type">
     <script src="js/covid19.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="./css/style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-   
+    <script src="js/chart-graph.js"></script>
+    <script src="js/graph.js"></script>
 
 
 </head>
 <body style="color:grey;">
 
-    <div class="container-fluid" id="img" style="position: fixed;color:grey">
+    <div class="container-fluid" id="img" style="color:grey">
         <span><img src="img/123c.png" style="width: 100px;
             display: inline-block;"></span>
         <h1 style="display: inline-block;">
@@ -76,11 +79,19 @@
       
      
 </div>
+<div class="row" id="chartDiv" >
+  <div  class="col-sm-4" id="pie"><canvas id="pie-chartForIndia" width="800" height="450"></canvas></div>
+  <div class="col-sm-4" id="pie1"><canvas id="pie-chartForWorld" width="800" height="450"></canvas></div>
 </div>
-</br>
-</br>
+<div class="row" style="margin-top:50px" >
+  <div class="col-sm-3"></canvas></div>
+  <div class="col-sm-6"><canvas id="line-chart" width="800" height="400"></canvas></div>
 
-    <div class="col-sm-6" id="tableD">
+</div>
+</div>
+
+
+    <div class="col-sm-12" id="tableD">
         <select class="form-control" id="selecT" onchange="showData();"  >
             <option >Search By</option>
             <option value="India" > India</option>
@@ -132,5 +143,50 @@
   margin-top: 22px;
 }
     </style>
+    <script>
+  $(document).ready(function(){
+      console.log("wnter");
+
+  // This will execute whenever the window is resized
+   // New height
+  ww=$(window).width(); // New width
+  console.log(ww);
+  if(ww>1800){
+    console.log("1200");
+    $("#pie1").removeClass();
+    $("#pie1").addClass("col-sm-3");
+    $("#pie").removeClass();
+    $("#pie").addClass("col-sm-3");
+  }
+  if(ww<1800){
+    console.log("1200");
+    $("#pie1").removeClass();
+    $("#pie1").addClass("col-sm-4");
+    $("#pie").removeClass();
+    $("#pie").addClass("col-sm-4");
+  }
+});
+  $(window).resize(function() {
+      console.log("wnter");
+
+  // This will execute whenever the window is resized
+   // New height
+  ww=$(window).width(); // New width
+  if(ww>1800){
+    $("#pie1").removeClass();
+    $("#pie1").addClass("col-sm-3");
+    $("#pie").removeClass();
+    $("#pie").addClass("col-sm-3");
+  }
+  if(ww<1800){
+   
+    $("#pie1").removeClass();
+    $("#pie1").addClass("col-sm-4");
+    $("#pie").removeClass();
+    $("#pie").addClass("col-sm-4");
+  }
+});
+   
+    </script>
 </body>
 </html>
