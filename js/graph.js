@@ -14,13 +14,14 @@ function graphforIndia(){
     else{
        
         var jsonData=JSON.parse(json);
+        var date=jsonData.cases_time_series[jsonData.cases_time_series.length-1].date;
         var confYes=jsonData.cases_time_series[jsonData.cases_time_series.length-1].dailyconfirmed;
         var recoverYes=jsonData.cases_time_series[jsonData.cases_time_series.length-1].dailyrecovered;
         var deathyes=jsonData.cases_time_series[jsonData.cases_time_series.length-1].dailydeceased;
         $("#Confirmedyes").text(confYes);
         $("#recoveredyes").text(recoverYes);
         $("#deathyes").text(deathyes);
-        console.log(confYes);
+        $("#date").text("("+date+"2020 )");
         for(i=jsonData.cases_time_series.length-10;i<jsonData.cases_time_series.length;i++){
             arrayforData.push(jsonData.cases_time_series[i].dailyconfirmed);
             arrayforDate.push(jsonData.cases_time_series[i].date);
