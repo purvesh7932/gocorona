@@ -68,7 +68,7 @@ Http.onreadystatechange = (e) => {
         }
         ui+='<tr>'
         +'<th scope="row">'
-        +state 
+        +state
         +'</th>'
         +'<td>'
         +'<span style="margin-left: -13px;color:red">'

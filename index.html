@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="google-site-verification" content="lPuj4cNFaBP59lTHCo4YSYcK2lF_5GQ2M-oKNitkNTU" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,9 +16,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="./css/style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="js/chart-graph.js"></script>
     <script src="js/graph.js"></script>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+        body{
+                font-family: 'Baloo Thambi 2', cursive;
+            }
       .loader {
       border: 16px solid #f3f3f3;
       border-radius: 50%;
@@ -48,6 +54,9 @@
             display: inline-block;"></span>
        <h1 style="display: inline-block;">
         Go Corona [Covid-19] </h1>
+        <a id="link" style="display: inline-block;margin-left: 46px;font-size:30px;COLOR: grey;text-decoration: none;" href="Link.html">Helpful Links </a>
+        <a id="link1" style="display: inline-block; ;margin-left: 46px;font-size:30px;COLOR: grey;text-decoration: none;" href="About.html">About Us </a>
+        <a id="link2" style="display: inline-block; ;margin-left: 46px;font-size:30px;COLOR: grey;text-decoration: none;" href="#">Map View[Coming..] </a>
     </div>
     <div id="main-div" style="padding: 10px;">
     <div class="col-sm-6" style="margin-top: 100px;">
@@ -105,8 +114,21 @@
   <div class="col-sm-4" id="pie1"><canvas id="pie-chartForWorld" width="800" height="450"></canvas></div>
 </div>
 <div class="row" style="margin-top:50px" >
-  <div class="col-sm-3"></canvas></div>
-  <div class="col-sm-6"><canvas id="line-chart" width="800" height="400"></canvas></div>
+  <div class="col-sm-2"></canvas></div>
+  <div class="col-sm-5"><canvas id="line-chart" width="800" height="400"></canvas></div>
+  <div class="col-sm-2">
+    <h2>Yesterday India Update</h2>
+    <div class="panel panel panel-warning" style="font-size: 25px;">
+      <div class="panel-heading .panel-danger">
+        Confirmed
+        <div id="Confirmedyes"></div>
+      </div>
+      <div  class="panel-footer">Recovered
+        <div id="recoveredyes"></div></div>
+        <div  class="panel-footer">Death
+        <div id="deathyes"></div></div>
+    </div>
+  </div>
 
 </div>
 </div>
@@ -174,6 +196,23 @@
     $("#pie").removeClass();
     $("#pie").addClass("col-sm-4");
   }
+  if(ww<600){
+ 
+ $("#link").css("font-size","16px");
+ $("#link").css("margin-left","10px");
+ $("#link1").css("font-size","16px");
+ $("#link1").css("margin-left","10px");
+ $("#link2").css("font-size","16px");
+ $("#link2").css("margin-left","10px");
+  if(ww>600){
+    $("#link").css("font-size","30px");
+    $("#link").css("margin-left","46px");
+    $("#link1").css("font-size","30px");
+    $("#link1").css("margin-left","46px");
+    $("#link2").css("font-size","30px");
+    $("#link2").css("margin-left","46px");
+  }
+}
 });
   $(window).resize(function() {
       console.log("wnter");
@@ -197,8 +236,21 @@
 
   }
   if(ww<600){
-    $(".darkmode-toggle").hide();
-    $(".darkmode-layer darkmode-layer-button").hide();
+ 
+    $("#link").css("font-size","16px");
+    $("#link").css("margin-left","10px");
+    $("#link1").css("font-size","16px");
+    $("#link1").css("margin-left","10px");
+    $("#link2").css("font-size","16px");
+    $("#link2").css("margin-left","10px");
+  }
+  if(ww>600){
+    $("#link").css("font-size","30px");
+    $("#link").css("margin-left","46px");
+    $("#link1").css("font-size","30px");
+    $("#link1").css("margin-left","46px");
+    $("#link2").css("font-size","30px");
+    $("#link2").css("margin-left","46px");
   }
 });
 function showData(){
@@ -212,5 +264,6 @@ function showData(){
         }
    
     </script>
+    <script src="./js/removeBanner.js"></script>
 </body>
 </html>

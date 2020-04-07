@@ -45,7 +45,7 @@ function piechartForIndia(){
     options: {
     title: {
         display: true,
-        text: 'India Pie Chart in Covid-19'
+        text: 'India Pie Chart o Covid-19'
     }
     }
 });   
@@ -83,7 +83,7 @@ Http.onreadystatechange = (e) => {
         options: {
         title: {
             display: true,
-            text: 'World Pie Chart in Covid-19'
+            text: 'World Pie Chart of Covid-19'
         }
         }
     }); 
